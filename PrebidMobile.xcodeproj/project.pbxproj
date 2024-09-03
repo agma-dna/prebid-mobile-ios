@@ -781,7 +781,6 @@
 		A9750D7A2ABB9A300066E4E6 /* PluginEventListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9750D792ABB9A300066E4E6 /* PluginEventListener.swift */; };
 		A9A3396B2AC57193006AD0E7 /* PBMAdViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A3396A2AC57193006AD0E7 /* PBMAdViewDelegate.swift */; };
 		F9F0999D2C78CC8A007DB464 /* SDKConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F0999C2C78CC8A007DB464 /* SDKConsoleLogger.swift */; };
-		F9F0999E2C78CC8A007DB464 /* SDKConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F0999C2C78CC8A007DB464 /* SDKConsoleLogger.swift */; };
 		F95DA2072C87567D0068A2BB /* SampleCustomRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95DA2062C87567D0068A2BB /* SampleCustomRenderer.swift */; };
 		FA5AD5E42271FA4100C8F274 /* ConstantsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5AD5E32271FA4100C8F274 /* ConstantsTest.swift */; };
 		FA9D7F2722E8A83D006FCBEF /* AdViewUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D7F2622E8A83D006FCBEF /* AdViewUtilsTests.swift */; };
