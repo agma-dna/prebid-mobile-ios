@@ -1,4 +1,5 @@
 PODS:
+  - AgmaSdkIos (0.16.0)
   - Alamofire (4.9.1)
   - AppLovinSDK (12.6.1)
   - Eureka (5.5.0)
@@ -12,6 +13,7 @@ PODS:
   - SVProgressHUD/Core (2.3.1)
 
 DEPENDENCIES:
+  - "AgmaSdkIos (from `git@github.com:agma-dna/agma-sdk-ios.git`, tag `0.17.0`)"
   - Alamofire (= 4.9.1)
   - AppLovinSDK
   - Eureka
@@ -31,7 +33,18 @@ SPEC REPOS:
     - RxSwift
     - SVProgressHUD
 
+EXTERNAL SOURCES:
+  AgmaSdkIos:
+    :git: "git@github.com:agma-dna/agma-sdk-ios.git"
+    :tag: 0.17.0
+
+CHECKOUT OPTIONS:
+  AgmaSdkIos:
+    :git: "git@github.com:agma-dna/agma-sdk-ios.git"
+    :tag: 0.17.0
+
 SPEC CHECKSUMS:
+  AgmaSdkIos: 1a5f0cc53669d41eae9997cecb05951c03af0358
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AppLovinSDK: a892bbeff744749a8121bd863aa1399f7eef6ef1
   Eureka: 1c18c7fcd8f772cc2ca42d6be36292dffa77eecb
@@ -41,6 +54,6 @@ SPEC CHECKSUMS:
   RxSwift: b9a93a26031785159e11abd40d1a55bcb8057e52
   SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
 
-PODFILE CHECKSUM: bae4436ed691a1d2217fde386d8881d6e7e06963
+PODFILE CHECKSUM: acdcecac5941c9edbe3c86f8cb3c42ae69d1a167
 
 COCOAPODS: 1.15.2

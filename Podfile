@@ -24,12 +24,17 @@ def ima_pod
   pod 'GoogleAds-IMA-iOS-SDK'
 end
 
+def agma_sdk_pod
+  pod 'AgmaSdkIos', :git => 'git@github.com:agma-dna/agma-sdk-ios.git', :tag => '0.17.0'
+end
+
 def prebid_demo_pods
   use_frameworks!
   
   ima_pod
   gma_pods
   applovin_pods
+  agma_sdk_pod
 end
 
 def internalTestApp_pods
