@@ -14,6 +14,7 @@
  */
 
 import UIKit
+import AgmaSdkIos
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
@@ -27,7 +28,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneDidBecomeActive(_ scene: UIScene) {}
     
-    func sceneWillResignActive(_ scene: UIScene) {}
+    func sceneWillResignActive(_ scene: UIScene) {
+        AgmaSdk.shared.sceneWillResignActive()
+    }
     
     func sceneWillEnterForeground(_ scene: UIScene) {}
     

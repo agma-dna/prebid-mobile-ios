@@ -22,9 +22,10 @@ import PrebidMobile
 import PrebidMobileGAMEventHandlers
 import PrebidMobileAdMobAdapters
 import PrebidMobileMAXAdapters
+import AgmaSdkIos
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PrebidEventDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -63,8 +64,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ALSdk.shared().userIdentifier = "USER_ID"
         ALSdk.shared().initializeSdk()
         
-        
-        
+        // FIXME: !! FOR AGMA SDK TESTING PURPOSE ONLY !!
+        Targeting.shared.gdprConsentString = "CPyFwIAPyFwIACnABIDEDVCkAP_AAAAAAAYgJmJV9D7dbXFDcXx3SPt0OYwW1dBTKuQhAhSAA2AFVAOQ8JQA02EaMATAhiACEQIAolYBAAEEHAFUAEGQQIAEAAHsIgSEhAAKIABEEBEQAAIQAAoKAIAAEAAIgAABIgSAmBiQSdLkRUCAGIAwDgBYAqgBCIABAgMBBEAIABAIAIIIwygAAQBAAIIAAAAAARAAAgAAAAAAIAAAAABAAAASEgAwABBMwNABgACCZgiADAAEEzBUAGAAIJmDIAMAAQTMHQAYAAgmYQgAwABBMwlABgACCZhSADAAEEzA.f_gAAAAABcgAAAAA"
+
+        // Configure AGMA SDK
+        AgmaSdk.shared.setConfig(
+            AgmaSdk.Config(
+                code: "provided-by-agma-please-change",
+                loggingEnabled: true
+            )
+        )
+        Prebid.shared.eventDelegate = self
+
         return true
     }
     
@@ -75,5 +86,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {}
+    
+    func prebidBidRequestDidFinish(requestData: Data?, responseData: Data?) {
+        AgmaSdk.shared.didReceivePrebid(request: requestData, response: responseData)
+    }
 }
-
